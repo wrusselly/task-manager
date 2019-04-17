@@ -10,9 +10,9 @@ public class User {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	Long userId;
-	String username;
-	String password;
+	private Long userId;
+	private String username;
+	private String password;
 	
 	public Long getUserId() {
 		return userId;
