@@ -1,5 +1,6 @@
 package com.qa.model;
 
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,6 +14,12 @@ public class User {
 	private Long userId;
 	private String username;
 	private String password;
+	
+//	@OneToMany (mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+//	private List<Task> tasks = new ArrayList<Task>();
+//	
+//	@OneToMany (mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+//	private List<Folder> folder = new ArrayList<Folder>();
 	
 	public Long getUserId() {
 		return userId;
