@@ -47,5 +47,13 @@ public class UsersController {
         usersRepo.delete(existingUser);
 		return existingUser;
     }
+	
+	@RequestMapping(value = "users//{username}", method = RequestMethod.GET)
+	public List<User> findByUsername(@PathVariable String username){
+		return usersRepo.findByUsername(username);
+	}
+	
+		
+	
 
 }
