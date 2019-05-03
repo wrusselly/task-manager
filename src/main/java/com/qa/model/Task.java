@@ -18,6 +18,7 @@ public class Task {
 	private String dateCompletedStr;
 	private Long userId;
 	private Long folderId;
+	private boolean complete = false;
 	
 
 
@@ -77,7 +78,7 @@ public class Task {
 		this.folderId = folderId;
 	}
 
-	public Task(Long taskId, Long userId, Long folderId, String text, String dateSetStr, String dateDueStr, String dateCompletedStr) {
+	public Task(Long taskId, Long userId, Long folderId, String text, String dateSetStr, String dateDueStr, String dateCompletedStr, boolean complete) {
 		this.setTaskId(taskId);
 		this.setText(text);
 		this.setDateSetStr(dateSetStr);
@@ -85,10 +86,19 @@ public class Task {
 		this.setDateCompletedStr(dateCompletedStr);
 		this.setUserId(userId);
 		this.setFolderId(folderId);
+		this.setComplete(complete);
 	}
 	
 	public Task() {
 
+	}
+
+	public boolean isComplete() {
+		return complete;
+	}
+
+	public void setComplete(boolean complete) {
+		this.complete = complete;
 	}
 
 }

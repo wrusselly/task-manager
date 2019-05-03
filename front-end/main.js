@@ -12,13 +12,16 @@ function getAllTasks(){
         data = request.response;
         displayAllTasks(data);
     }
-    request.send();
-    
+    request.send();  
 }
 
 function displayAllTasks(taskList){
     document.getElementById("task-display").innerHTML="";
+    let count = 0;
+    let divId = "task" + count;
     for(let task of taskList){
+        let division = document.createElement("div");
+        division.setAttribute("id", divId);
         for(let key in task){
             if (key=="text"){
                 let taskText = document.createElement("h6");
@@ -63,5 +66,9 @@ function addTask(){
         getAllTasks();
     }
     request.send(task);
+}
+
+function deleteTask(id){
+
 }
 

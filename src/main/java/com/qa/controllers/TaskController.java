@@ -48,5 +48,20 @@ public class TaskController {
         taskRepo.delete(existingTask);
 		return existingTask;
     }
+	
+	@RequestMapping(value = "task//{complete}", method = RequestMethod.GET)
+	public List<Task> findByComplete(@PathVariable boolean complete){
+		return taskRepo.findByComplete(complete);
+	}
+	
+	@RequestMapping(value = "task/{userId}/{folderId}/{complete}", method = RequestMethod.GET)
+	public List<Task> findByUserIdAndFolderIdAndComplete(@PathVariable Long userId, @PathVariable Long folderId, @PathVariable boolean complete){
+		return taskRepo.findByUserIdAndFolderIdAndComplete(userId, folderId, complete);
+	}
+	
+	@RequestMapping(value = "task/{userId}/{complete}", method = RequestMethod.GET)
+	List<Task> findByUserIdAndComplete(@PathVariable Long userId, @PathVariable boolean complete){
+		return taskRepo.findByUserIdAndComplete(userId, complete);
+	}
 
 }
