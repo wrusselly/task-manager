@@ -53,7 +53,9 @@ public class UsersController {
 		return usersRepo.findByUsername(username);
 	}
 	
+	@RequestMapping(value = "users/{username}/{password}/only", method = RequestMethod.GET)
+	public List<User> findByUsername(@PathVariable String username, @PathVariable String password){
+		return usersRepo.findByUsernameAndPassword(username, password);
+	}
 		
-	
-
 }

@@ -48,5 +48,10 @@ public class FolderController {
         folderRepo.delete(existingFolder);
 		return existingFolder;
     }
+	
+	@RequestMapping(value = "folder//{userId}", method = RequestMethod.GET)
+	public List<Folder> findByUserId(@PathVariable Long userId){
+		return folderRepo.findByUserId(userId);
+	}
 
 }
