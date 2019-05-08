@@ -25,8 +25,13 @@ public class UsersController {
 	}
 	
 	@RequestMapping(value = "users", method = RequestMethod.POST)
-	public User create(@RequestBody User user){
-		return usersRepo.saveAndFlush(user);
+	public int create(@RequestBody User user){
+		if (usersRepo.findByUsername(user.getUsername()).isEmpty()) {
+			usersRepo.saveAndFlush(user);
+			return 1;
+		} else {
+			return 0;
+		}
 	}
 	
 	@RequestMapping(value = "users/{id}", method = RequestMethod.GET)
