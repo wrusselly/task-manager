@@ -60,7 +60,7 @@ public class TaskController {
 	}
 	
 	@RequestMapping(value = "task/{userId}/{complete}", method = RequestMethod.GET)
-	List<Task> findByUserIdAndComplete(@PathVariable Long userId, @PathVariable boolean complete){
+	public List<Task> findByUserIdAndComplete(@PathVariable Long userId, @PathVariable boolean complete){
 		return taskRepo.findByUserIdAndComplete(userId, complete);
 	}
 

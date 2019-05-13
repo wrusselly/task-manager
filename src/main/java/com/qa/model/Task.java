@@ -15,7 +15,6 @@ public class Task {
 	private String text;
 	private String dateSetStr;
 	private String dateDueStr;
-	private String dateCompletedStr;
 	private Long userId;
 	private Long folderId;
 	private boolean complete = false;
@@ -53,14 +52,6 @@ public class Task {
 	public void setDateDueStr(String dateDueStr) {
 		this.dateDueStr = dateDueStr;
 	}
-
-	public String getDateCompletedStr() {
-		return dateCompletedStr;
-	}
-
-	public void setDateCompletedStr(String dateCompletedStr) {
-		this.dateCompletedStr = dateCompletedStr;
-	}
 	
 	public Long getUserId() {
 		return userId;
@@ -78,12 +69,11 @@ public class Task {
 		this.folderId = folderId;
 	}
 
-	public Task(Long taskId, Long userId, Long folderId, String text, String dateSetStr, String dateDueStr, String dateCompletedStr, boolean complete) {
+	public Task(Long taskId, Long userId, Long folderId, String text, String dateSetStr, String dateDueStr, boolean complete) {
 		this.setTaskId(taskId);
 		this.setText(text);
 		this.setDateSetStr(dateSetStr);
 		this.setDateDueStr(dateDueStr);
-		this.setDateCompletedStr(dateCompletedStr);
 		this.setUserId(userId);
 		this.setFolderId(folderId);
 		this.setComplete(complete);

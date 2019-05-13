@@ -15,12 +15,6 @@ public class User {
 	private String username;
 	private String password;
 	
-//	@OneToMany (mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-//	private List<Task> tasks = new ArrayList<Task>();
-//	
-//	@OneToMany (mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-//	private List<Folder> folder = new ArrayList<Folder>();
-	
 	public Long getUserId() {
 		return userId;
 	}
