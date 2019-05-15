@@ -14,7 +14,7 @@ import com.qa.model.Folder;
 import com.qa.repository.FolderRepo;
 
 @RestController
-@RequestMapping("task-tracker/")
+@RequestMapping("api/task-tracker/")
 public class FolderController {
 	
 	@Autowired

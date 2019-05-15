@@ -14,7 +14,7 @@ import com.qa.model.Task;
 import com.qa.repository.TaskRepo;
 
 @RestController
-@RequestMapping("task-tracker/")
+@RequestMapping("api/task-tracker/")
 public class TaskController {
 	
 	@Autowired

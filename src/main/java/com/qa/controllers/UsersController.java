@@ -13,7 +13,7 @@ import com.qa.model.User;
 import com.qa.repository.UsersRepo;
 
 @RestController
-@RequestMapping("task-tracker/")
+@RequestMapping("api/task-tracker/")
 public class UsersController {
 	
 	@Autowired
